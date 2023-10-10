@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #4294e3;
-    --secondary: rgb(66, 6, 6);
-    --light: #f0f6ff;
-    --dark: #262b47;
+    --primary: #e34285;
+    --secondary: rgb(25, 129, 226);
+    --light: #ec9bea;
+    --dark: #f10e9a;
 }
 
 /*** Spinner ***/
@@ -25,6 +25,10 @@ h1,
 h2,
 .fw-bold {
     font-weight: 700 !important;
+
+}
+.textwhite{
+    color: aqua;
 }
 
 h3,
@@ -38,6 +42,8 @@ h6,
 .fw-medium {
     font-weight: 500 !important;
 }
+
+
 
 /*** Gradient Text & BG ***/
 .text-primary-gradient {
@@ -62,7 +68,7 @@ h6,
 
 .bg-primary-gradient {
     background: linear-gradient(
-        to bottom right,
+        to bottom left,
         var(--primary),
         var(--secondary)
     );
@@ -75,6 +81,7 @@ h6,
         var(--primary)
     );
 }
+
 
 /*** Button ***/
 .btn {
@@ -177,6 +184,7 @@ h6,
     color: var(--light) !important;
     outline: none;
     transition: 0.5s;
+    
 }
 
 .navbar-light .navbar-nav .nav-link::before {
@@ -193,7 +201,7 @@ h6,
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 20px 0;
+    padding: 60px 0;
     color: var(--dark) !important;
 }
 
@@ -210,6 +218,8 @@ h6,
     max-height: 60px;
     transition: 0.5s;
 }
+
+
 
 .sticky-top.navbar-light .navbar-brand img {
     max-height: 45px;
@@ -268,7 +278,7 @@ h6,
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: #ffffff;
+        background: #cbf3f8;
     }
 
     .sticky-top.navbar-light .navbar-nav .nav-link::before {
@@ -290,10 +300,12 @@ h6,
 .hero-header {
     margin-bottom: 6rem;
     padding: 16rem 0 0 0;
-    background: url(../img/bg-circle.png), url(../img/bg-triangle.png),
-        url(../img/bg-bottom.png),
+    background: 
+    url(../img/bg-circle.png) , 
+    url(../img/bg-triangle.png),
+        url(../img/bg-side.png),
         linear-gradient(to bottom right, var(--primary), var(--secondary));
-    background-position: left 0px top 0px, right 0px top 50%, center bottom;
+    background-position: left 0px top 0px, right 0px top 50%,  center top;
     background-repeat: no-repeat;
 }
 
@@ -303,37 +315,29 @@ h6,
     }
 }
 
-/*** Feature ***/
-.feature-item {
-    transition: 0.5s;
-}
+/
 
-.feature-item:hover {
-    margin-top: -15px;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
-}
-
-/*** Pricing ***/
-.pricing .nav {
+/* Interests */
+.interests .nav {
     padding: 2px;
 }
 
-.pricing .nav-link {
+.interests .nav-link {
     padding: 12px 30px;
     font-weight: 500;
-    color: var(--dark);
-    background: #ffffff;
+    color: var(--light);
+    
 }
 
-.pricing .nav-item:first-child .nav-link {
+.interests .nav-item:first-child .nav-link {
     border-radius: 30px 0 0 30px;
 }
 
-.pricing .nav-item:last-child .nav-link {
+.interests .nav-item:last-child .nav-link {
     border-radius: 0 30px 30px 0;
 }
 
-.pricing .nav-link.active {
+.interests .nav-link.active {
     color: #ffffff;
     background: linear-gradient(
         to bottom right,
@@ -342,73 +346,8 @@ h6,
     );
 }
 
-/*** Screenshot ***/
-.screenshot-carousel {
-    position: relative;
-    width: 253px;
-    height: 500px;
-    padding: 15px;
-    margin-right: 30px;
-}
 
-.screenshot-carousel::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(../img/screenshot-frame.png) center center no-repeat;
-    background-size: 253px 500px;
-    z-index: 1;
-}
 
-.screenshot-carousel .owl-item img {
-    position: relative;
-    width: 223px;
-    height: 470px;
-}
-
-.screenshot-carousel .owl-dots {
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.screenshot-carousel .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 5px 0;
-    width: 15px;
-    height: 15px;
-    background: linear-gradient(
-        to bottom right,
-        var(--primary),
-        var(--secondary)
-    );
-    border-radius: 15px;
-    transition: 0.5s;
-}
-
-.screenshot-carousel .owl-dot::after {
-    position: absolute;
-    content: '';
-    width: 5px;
-    height: 5px;
-    top: 5px;
-    left: 5px;
-    background: #ffffff;
-    border-radius: 5px;
-}
-
-.screenshot-carousel .owl-dot.active {
-    box-shadow: 0 0 10px var(--dark);
-}
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item,
@@ -467,9 +406,11 @@ h6,
 .footer {
     margin-top: 6rem;
     padding-top: 9rem;
-    background: url(../img/bg-circle.png), url(../img/bg-triangle.png),
-        url(../img/bg-top.png),
-        linear-gradient(to bottom right, var(--primary), var(--secondary));
+    background: 
+    url(../img/bg-circle.png),
+     url(../img/bg-triangle.png),
+        url(../img/bg-side.png),
+        linear-gradient(to top left, var(--primary), var(--secondary));
     background-position: left 0px bottom 0px, right 0px top 50%, center top;
     background-repeat: no-repeat;
 }
@@ -535,3 +476,72 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+/* start of rotate 3d image */
+img{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+/* .container .images{ */
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 40%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) rotateZ(-10deg);
+    animation: ror 20s linear infinite;
+
+
+}
+@keyframes ror{
+    50%{
+        transform: rotateX(30deg);
+    }
+    80%{
+        transform: rotateX(-30deg);
+    }
+}
+  .images{
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+
+}
+@keyframes rotate{
+
+    from{
+
+    }
+    to{
+        transform:rotateY(360deg) ;
+    }
+}
+img:nth-child(1){
+    transform:rotateY(60deg) translateZ(300px)
+}
+img:nth-child(2){
+    transform:rotateY(120deg) translateZ(300px)
+}
+img:nth-child(3){
+    transform:rotateY(180deg) translateZ(300px)
+}
+img:nth-child(4){
+    transform:rotateY(240deg) translateZ(300px)
+}
+img:nth-child(5){
+    transform:rotateY(300deg) translateZ(300px)
+}
+img:nth-child(6){
+    transform:rotateY(360deg) translateZ(300px)
+}
+img:hover{
+    width:340px ;
+    height: 220px;
+    cursor: pointer;
+}
+/* end of rotate 3d image */
+
+
