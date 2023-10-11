@@ -224,6 +224,9 @@ h6,
 .sticky-top.navbar-light .navbar-brand img {
     max-height: 45px;
 }
+.navbar-collapse{
+    padding-left: 15%;
+}
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
