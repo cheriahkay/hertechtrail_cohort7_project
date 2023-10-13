@@ -554,5 +554,13 @@ img:hover{
     cursor: pointer;
 }
 /* end of rotate 3d image */
-
+@media  only screen and( max-width: 400px) {
+    .hero-header{
+        width:90%;
+        height: 90%;
+       
+    }
+    
+    
+}
 
