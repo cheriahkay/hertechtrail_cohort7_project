@@ -485,12 +485,25 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+.image1{
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    position:relative;
+    display: flex;
+
+}
+
+
+
 /* start of rotate 3d image */
-img{
+img {
     height: 200px;
     width: 200px;
     position: absolute;
+    
 }
+ 
 
     
     
@@ -524,7 +537,7 @@ img{
 img:nth-child(1){
     transform:rotateY(60deg) translateZ(300px)
 }
-img:nth-child(2){   `   1   `
+img:nth-child(2){  
     transform:rotateY(120deg) translateZ(300px)
 }
 img:nth-child(3){
@@ -539,19 +552,14 @@ img:nth-child(5){
 img:nth-child(6){
     transform:rotateY(360deg) translateZ(300px)
 }
-img:hover{
-    width:340px ;
-    height: 220px;
-    cursor: pointer;
-}
+ img:hover .images{ 
+width: 400px;
+height:400px
+} 
 /* end of rotate 3d image */
-@media  only screen and( max-width: 400px) {
-    .hero-header{
-        width:90%;
-        height: 90%;
-       
-    }
+
     
     
-}
+
+
 
